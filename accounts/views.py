@@ -1,3 +1,4 @@
+from contacts.models import Contacts
 from django.contrib import messages, auth
 from django.contrib.auth.models import User
 from django.shortcuts import redirect, render
@@ -58,8 +59,6 @@ def login(request):
             messages.error(request,'invalid email or password')
             return redirect('login')
 
-      
-        return
     else:
         return render(request, 'accounts/login.html')
 
@@ -72,4 +71,8 @@ def logout(request):
 
 
 def dashboard(request):
-    return render(request, 'accounts/dashboard.html')
+    user_contacts = Contacts.objects.order_by('-Contact_date').filter(user_id=request.user.id)
+    context = {
+        'contacts':user_contacts
+    }
+    return render(request, 'accounts/dashboard.html', context)
