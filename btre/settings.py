@@ -90,7 +90,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'btredb',
-        'USER': 'postgres',
+        'USER': 'dbadmin',
         'PASSWORD': 'Benedict2nv?',
         'HOST': 'localhost'
     }
@@ -158,6 +158,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #Email config should not be production Local settings
 
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT =587
+EMAIL_HOST_USER = 'kizito2nv@gmail.com'
+EMAIL_HOST_PASSWORD = 'Benedict2nv?'
+EMAIL_USE_TLS = True
 
 
 #to be added when pushing to production
