@@ -163,3 +163,8 @@ EMAIL_PORT =587
 EMAIL_HOST_USER = 'kizito2nv@gmail.com'
 EMAIL_HOST_PASSWORD = 'Benedict2nv?'
 EMAIL_USE_TLS = True
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
