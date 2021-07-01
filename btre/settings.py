@@ -156,15 +156,14 @@ MESSAGE_TAGS = {
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-#Email config
+#Email config should not be production Local settings
 
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT =587
-EMAIL_HOST_USER = 'kizito2nv@gmail.com'
-EMAIL_HOST_PASSWORD = 'Benedict2nv?'
-EMAIL_USE_TLS = True
 
+
+#to be added when pushing to production
+"""
 try:
     from .local_settings import *
 except ImportError:
     pass
+"""
