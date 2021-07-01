@@ -22,7 +22,6 @@ psycopg2-binary==2.9
 Pygments==2.6.1
 pyparsing==2.4.6
 pytz==2019.3
-pywin32==227
 requests==2.23.0
 six==1.14.0
 snowballstemmer==2.0.0
